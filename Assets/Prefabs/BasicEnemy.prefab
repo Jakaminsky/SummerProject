@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 6659872305638336047}
   - component: {fileID: 6242182216940358784}
   - component: {fileID: 8166768250734975281}
-  - component: {fileID: 1109571722178137559}
   - component: {fileID: 5117871413150338700}
   m_Layer: 0
   m_Name: BasicEnemy
@@ -192,24 +191,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f4521c2e3a8d7949bdaa59d06bc5776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1109571722178137559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6331342109291397878}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b92f15a82a5aaf44badd0c9ac1cd9bca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fireVFXPrefab: {fileID: 408058570322969610, guid: a34cd49021135e844bb22a84b4f95815, type: 3}
-  firefireVFXPrefab: {fileID: 408058570322969610, guid: 42b8dcc4eb2989f4abc1d28e1900c98a, type: 3}
-  iceVFXPrefab: {fileID: 1424094625775597091, guid: 1181383c5a3f94d4193b91d8211ba6d3, type: 3}
-  iceiceVFXPrefab: {fileID: 1424094625775597091, guid: 4b270a1c2de89694aa11bf69051a9da2, type: 3}
-  poisonVFXPrefab: {fileID: 7743361786780544565, guid: c018d65c046684040828c9e2eff2cae6, type: 3}
-  explosionVFXPrefab: {fileID: 1117615289418209538, guid: 19bec01fae5a3fd478e38783073af671, type: 3}
 --- !u!195 &5117871413150338700
 NavMeshAgent:
   m_ObjectHideFlags: 0

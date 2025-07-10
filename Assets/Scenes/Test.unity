@@ -638,7 +638,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1109571722178137559, guid: 76fec7171e67d714d914d7f9004c43fa, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1579,9 +1580,6 @@ GameObject:
   - component: {fileID: 1316249448}
   - component: {fileID: 1316249452}
   - component: {fileID: 1316249454}
-  - component: {fileID: 1316249453}
-  - component: {fileID: 1316249455}
-  - component: {fileID: 1316249456}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1702,23 +1700,6 @@ MonoBehaviour:
   numberOfDashes: 2
   currentDashes: {fileID: 745662720}
   dashIcon: {fileID: 1102059019}
---- !u!114 &1316249453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1316249447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0987f50fbe888bc48a8c2070beb05a78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectileSpeed: 20
-  cooldown: 1.5
-  cooldownReset: 1.5
-  projectile: {fileID: 4884262015840521007, guid: c317f84ed57dbb042a4644f5eb664fe5, type: 3}
-  spawnPoint: {fileID: 1171362827}
 --- !u!114 &1316249454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1732,41 +1713,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   armor: 3
---- !u!114 &1316249455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1316249447}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 059398326a2f43e4e9474a84fc9800fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectileSpeed: 5
-  cooldown: 5
-  cooldownReset: 5
-  projectile: {fileID: 6571566264138001365, guid: aac4354e45a20b64ca19a7d8134bae83, type: 3}
-  spawnPoint: {fileID: 1171362827}
---- !u!114 &1316249456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1316249447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 592856644c19b3b40b6a8baa19591506, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationSpeed: 50
-  projectile: {fileID: 861417026402821312, guid: 72a4a2ca0f234d340a406c0612193679, type: 3}
-  fireMaterial: {fileID: 2100000, guid: 4986e53cb7e9f504d9fb3ecccc2feaf8, type: 2}
-  iceMaterial: {fileID: 2100000, guid: 7015c12d87515c34c845157e7e8d1675, type: 2}
-  poisonMaterial: {fileID: 2100000, guid: f6dc00f0c29111d4b8af53d67c8e055f, type: 2}
-  explosiveMaterial: {fileID: 2100000, guid: 17e1e1493ba12dc4ca17cb7565458295, type: 2}
 --- !u!1 &1395827167
 GameObject:
   m_ObjectHideFlags: 0

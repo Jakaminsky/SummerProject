@@ -65,12 +65,16 @@ public class PlayerMovement : MonoBehaviour
 
         float elapsedTime = 0.0f;
 
+        gameObject.GetComponent<CapsuleCollider>().enabled = false;
+
         while (elapsedTime < dashDuration)
         {
             transform.Translate(moveDirection * dashSpeed * Time.deltaTime, Space.World);
             elapsedTime += Time.deltaTime;
             yield return null;
         }
+
+        gameObject.GetComponent<CapsuleCollider>().enabled = true;
 
         isDashing = false;
     }

@@ -7,7 +7,7 @@ public class PlayerHealth : MonoBehaviour
     public float armor = 3.0f;
 
     private float iFrames = 0.0f;
-    private float iFrameDuration = 0.2f;
+    private float iFrameDuration = 1.0f;
 
     private void Update()
     {
