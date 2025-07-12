@@ -7,12 +7,6 @@ using TMPro;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement Variables")]
-    public float moveSpeed = 7.5f;
-    public float dashSpeed = 20.0f;
-    public float dashCooldown = 3.0f;
-    public float dashDuration = 0.2f;
-    public int numberOfDashes = 2;
-
     private float lastDashTime;
     private Vector3 moveDirection;
     private bool isDashing;
@@ -23,12 +17,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        lastDashTime = dashCooldown;
+        lastDashTime = StatsManager.instance.dashCooldown;
     }
 
     private void Update()
     {
-        currentDashes.text = numberOfDashes.ToString();
+        currentDashes.text = StatsManager.instance.numberOfDashes.ToString();
 
         if (!isDashing)
         {
@@ -38,16 +32,16 @@ public class PlayerMovement : MonoBehaviour
         lastDashTime -= Time.deltaTime;
         if(lastDashTime < 0)
         {
-            numberOfDashes = 2;
-            lastDashTime = dashCooldown;
+            StatsManager.instance.numberOfDashes = StatsManager.instance.totalDashes;
+            lastDashTime = StatsManager.instance.dashCooldown;
         }
 
-        dashIcon.fillAmount = 1f - (lastDashTime / 3f);
+        dashIcon.fillAmount = 1f - (lastDashTime / StatsManager.instance.dashCooldown);
 
-        if (Input.GetKeyDown(KeyCode.Space) && numberOfDashes > 0 && moveDirection != Vector3.zero)
+        if (Input.GetKeyDown(KeyCode.Space) && StatsManager.instance.numberOfDashes > 0 && moveDirection != Vector3.zero)
         {
             StartCoroutine(dash());
-            numberOfDashes--;
+            StatsManager.instance.numberOfDashes--;
         }
     }
 
@@ -56,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
         moveDirection = new Vector3(horizontal, 0f, vertical).normalized;
-        transform.Translate(moveDirection * moveSpeed * Time.deltaTime, Space.World);
+        transform.Translate(moveDirection * StatsManager.instance.moveSpeed * Time.deltaTime, Space.World);
     }
 
     private IEnumerator dash()
@@ -67,9 +61,9 @@ public class PlayerMovement : MonoBehaviour
 
         gameObject.GetComponent<CapsuleCollider>().enabled = false;
 
-        while (elapsedTime < dashDuration)
+        while (elapsedTime < StatsManager.instance.dashDuration)
         {
-            transform.Translate(moveDirection * dashSpeed * Time.deltaTime, Space.World);
+            transform.Translate(moveDirection * StatsManager.instance.dashSpeed * Time.deltaTime, Space.World);
             elapsedTime += Time.deltaTime;
             yield return null;
         }

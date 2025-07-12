@@ -11,8 +11,8 @@ public class PlayerStatCanvas : MonoBehaviour
 
     private void Start()
     {
-        currentHealth = PlayerHealth.currentHealth;
-        maxHealth = PlayerHealth.maxHealth;
+        currentHealth = StatsManager.instance.currentHealth;
+        maxHealth = StatsManager.instance.maxHealth;
     }
 
     private void Update()
@@ -22,8 +22,8 @@ public class PlayerStatCanvas : MonoBehaviour
 
     private void updateHealth()
     {
-        currentHealth = Mathf.Clamp(PlayerHealth.currentHealth, 0, PlayerHealth.maxHealth);
-        maxHealth = PlayerHealth.maxHealth;
+        currentHealth = Mathf.Clamp(StatsManager.instance.currentHealth, 0, StatsManager.instance.maxHealth);
+        maxHealth = StatsManager.instance.maxHealth;
 
         healthSlider.value = currentHealth/maxHealth;
         healthText.text = currentHealth.ToString() + "/" + maxHealth.ToString();

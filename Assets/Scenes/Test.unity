@@ -119,6 +119,68 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &106634861
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 106634863}
+  - component: {fileID: 106634862}
+  m_Layer: 0
+  m_Name: StatsManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &106634862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106634861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d97c0ca9d58363c4a8a6ed27298ced88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  dashSpeed: 20
+  dashCooldown: 3
+  dashDuration: 0.2
+  totalDashes: 2
+  numberOfDashes: 2
+  maxHealth: 100
+  currentHealth: 100
+  armor: 3
+  block: 0
+  revives: 0
+  baseDamage: 100
+  cooldownReduction: 100
+  critChange: 0
+  critDamage: 100
+  stamina: 100
+  experienceGain: 100
+  experienceRadius: 3
+--- !u!4 &106634863
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106634861}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.253085, y: 14.841154, z: -19.546064}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &194282413
 GameObject:
   m_ObjectHideFlags: 0
@@ -1693,11 +1755,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6feec5e2e9592124785b51819bd01af3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  dashSpeed: 20
-  dashCooldown: 3
-  dashDuration: 0.2
-  numberOfDashes: 2
   currentDashes: {fileID: 745662720}
   dashIcon: {fileID: 1102059019}
 --- !u!114 &1316249454
@@ -1712,7 +1769,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56782cd4530a3df408b945a52c7bcf03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  armor: 3
 --- !u!1 &1395827167
 GameObject:
   m_ObjectHideFlags: 0
@@ -2535,3 +2591,4 @@ SceneRoots:
   - {fileID: 936734560}
   - {fileID: 1423415686}
   - {fileID: 1645748017}
+  - {fileID: 106634863}
