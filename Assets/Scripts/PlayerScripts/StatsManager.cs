@@ -22,13 +22,17 @@ public class StatsManager : MonoBehaviour
     [Header("Combat")]
     public int baseDamage;
     public int cooldownReduction;
+    public int projectileSize;
     public int critChange;
-    public int critDamage;
+    public float critDamage;
 
     [Header("Energy")]
     public int stamina;
 
     [Header("Other")]
+    public int playerLevel;
+    public float currentXp;
+    public float neededXp;
     public int experienceGain;
     public int experienceRadius;
 

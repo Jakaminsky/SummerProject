@@ -159,12 +159,13 @@ MonoBehaviour:
   armor: 3
   block: 0
   revives: 0
-  baseDamage: 100
-  cooldownReduction: 100
+  baseDamage: 1
+  cooldownReduction: 1
+  projectileSize: 0
   critChange: 0
-  critDamage: 100
+  critDamage: 1.4
   stamina: 100
-  experienceGain: 100
+  experienceGain: 1
   experienceRadius: 3
 --- !u!4 &106634863
 Transform:
@@ -642,7 +643,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6242182216940358784, guid: 76fec7171e67d714d914d7f9004c43fa, type: 3}
       propertyPath: health
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6242182216940358784, guid: 76fec7171e67d714d914d7f9004c43fa, type: 3}
       propertyPath: enemySpeed
@@ -1642,6 +1643,7 @@ GameObject:
   - component: {fileID: 1316249448}
   - component: {fileID: 1316249452}
   - component: {fileID: 1316249454}
+  - component: {fileID: 1316249455}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1769,6 +1771,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56782cd4530a3df408b945a52c7bcf03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1316249455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316249447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 714975e44c995404ab95053a8268ef60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectileSpeed: 5
+  cooldown: 1
+  cooldownReset: 1
+  projectile: {fileID: 4884262015840521007, guid: c317f84ed57dbb042a4644f5eb664fe5, type: 3}
+  spawnPoint: {fileID: 1171362827}
 --- !u!1 &1395827167
 GameObject:
   m_ObjectHideFlags: 0
