@@ -177,8 +177,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38f2f207675bc1c4eba9659c4c6d9432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 1
+  enemyType: 0
   health: 50
   enemySpeed: 1
+  xpPrefab: {fileID: 714661148628362197, guid: fc6b332148dd400489fab3cc1983a87b, type: 3}
 --- !u!114 &8166768250734975281
 MonoBehaviour:
   m_ObjectHideFlags: 0

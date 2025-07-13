@@ -29,7 +29,7 @@ public class StatsManager : MonoBehaviour
     [Header("Energy")]
     public int stamina;
 
-    [Header("Other")]
+    [Header("Experience")]
     public int playerLevel;
     public float currentXp;
     public float neededXp;

@@ -4,6 +4,7 @@ public class PlayerLevel : MonoBehaviour
 {
     private void Update()
     {
+        suckXP();
         setNeededXP();
         levelUp();
     }
@@ -11,7 +12,7 @@ public class PlayerLevel : MonoBehaviour
     private void setNeededXP()
     {
         float formula = 50 * Mathf.Pow(1.5f, StatsManager.instance.playerLevel) + 100;
-        StatsManager.instance.neededXp = formula * StatsManager.instance.experienceGain;
+        StatsManager.instance.neededXp = formula;
     }
 
     private void levelUp()
@@ -21,6 +22,31 @@ public class PlayerLevel : MonoBehaviour
             float overflowXP = StatsManager.instance.currentXp - StatsManager.instance.neededXp;
             StatsManager.instance.playerLevel++;
             StatsManager.instance.currentXp = 0 + overflowXP;
+        }
+    }
+
+    private void suckXP()
+    {
+        GameObject[] xpOrbs = GameObject.FindGameObjectsWithTag("XP");
+
+        foreach(GameObject orb in xpOrbs)
+        {
+            float distance = Vector3.Distance(transform.position, orb.transform.position);
+            if (distance <= StatsManager.instance.experienceRadius)
+            {
+                Vector3 direction = (transform.position - orb.transform.position).normalized;
+                orb.transform.position += direction * 10 * Time.deltaTime;
+            }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        GameObject xp = other.gameObject;
+        if (xp.CompareTag("XP"))
+        {
+            StatsManager.instance.currentXp += xp.GetComponent<xpOrb>().xp;
+            Destroy(xp);
         }
     }
 
