@@ -169,7 +169,7 @@ MonoBehaviour:
   currentXp: 0
   neededXp: 0
   experienceGain: 1
-  experienceRadius: 3
+  experienceRadius: 5
 --- !u!4 &106634863
 Transform:
   m_ObjectHideFlags: 0

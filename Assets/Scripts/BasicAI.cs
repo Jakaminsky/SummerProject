@@ -10,7 +10,6 @@ public class BasicAI : MonoBehaviour
 
     private void Start()
     {
-        stats = GetComponent<EnemyStats>();
         player = GameObject.FindGameObjectWithTag("Player");
         agent = GetComponent<NavMeshAgent>();
         agent.speed = stats.enemySpeed;
@@ -19,7 +18,6 @@ public class BasicAI : MonoBehaviour
     private void Update()
     {
         moveTowardPlayer();
-        die();
     }
 
     private void moveTowardPlayer()
@@ -29,15 +27,4 @@ public class BasicAI : MonoBehaviour
             agent.SetDestination(player.transform.position);
         }
     }
-
-    private void die()
-    {
-        if(stats.health <= 0)
-        {
-            Destroy(gameObject);
-        }
-    }
-
-    
-
 }

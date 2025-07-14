@@ -48,7 +48,7 @@ public class EnemyStats : MonoBehaviour
 
     private void dropXP()
     {
-        GameObject orb = Instantiate(xpPrefab, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.identity);
+        GameObject orb = Instantiate(xpPrefab, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 1, gameObject.transform.position.z), Quaternion.identity);
         orb.GetComponent<xpOrb>().xp = calculateXPNum();
     }
 
