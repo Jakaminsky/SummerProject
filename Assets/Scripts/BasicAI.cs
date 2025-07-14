@@ -10,13 +10,14 @@ public class BasicAI : MonoBehaviour
 
     private void Start()
     {
+        stats = gameObject.GetComponent<EnemyStats>();
         player = GameObject.FindGameObjectWithTag("Player");
         agent = GetComponent<NavMeshAgent>();
-        agent.speed = stats.enemySpeed;
     }
 
     private void Update()
     {
+        agent.speed = stats.enemySpeed;
         moveTowardPlayer();
     }
 

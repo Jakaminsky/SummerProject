@@ -162,7 +162,7 @@ MonoBehaviour:
   baseDamage: 1
   cooldownReduction: 1
   projectileSize: 1
-  critChance: 0
+  critChance: 5
   critDamage: 1.4
   stamina: 100
   playerLevel: 1
@@ -769,7 +769,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6242182216940358784, guid: 76fec7171e67d714d914d7f9004c43fa, type: 3}
       propertyPath: health
-      value: 50
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6242182216940358784, guid: 76fec7171e67d714d914d7f9004c43fa, type: 3}
       propertyPath: enemySpeed
@@ -785,7 +785,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8166768250734975281, guid: 76fec7171e67d714d914d7f9004c43fa, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9064785091310929973, guid: 76fec7171e67d714d914d7f9004c43fa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -846,6 +846,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1171362827}
     - target: {fileID: 6242182216940358784, guid: 76fec7171e67d714d914d7f9004c43fa, type: 3}
+      propertyPath: health
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242182216940358784, guid: 76fec7171e67d714d914d7f9004c43fa, type: 3}
       propertyPath: enemySpeed
       value: 5
       objectReference: {fileID: 0}
@@ -859,7 +863,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8166768250734975281, guid: 76fec7171e67d714d914d7f9004c43fa, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9064785091310929973, guid: 76fec7171e67d714d914d7f9004c43fa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1349,6 +1353,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1171362827}
     - target: {fileID: 6242182216940358784, guid: 76fec7171e67d714d914d7f9004c43fa, type: 3}
+      propertyPath: health
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242182216940358784, guid: 76fec7171e67d714d914d7f9004c43fa, type: 3}
       propertyPath: enemyType
       value: 0
       objectReference: {fileID: 0}
@@ -1366,7 +1374,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8166768250734975281, guid: 76fec7171e67d714d914d7f9004c43fa, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9064785091310929973, guid: 76fec7171e67d714d914d7f9004c43fa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2987,6 +2995,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1171362827}
     - target: {fileID: 6242182216940358784, guid: 76fec7171e67d714d914d7f9004c43fa, type: 3}
+      propertyPath: health
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242182216940358784, guid: 76fec7171e67d714d914d7f9004c43fa, type: 3}
       propertyPath: enemySpeed
       value: 5
       objectReference: {fileID: 0}
@@ -3000,7 +3012,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8166768250734975281, guid: 76fec7171e67d714d914d7f9004c43fa, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9064785091310929973, guid: 76fec7171e67d714d914d7f9004c43fa, type: 3}
       propertyPath: m_LocalPosition.x
