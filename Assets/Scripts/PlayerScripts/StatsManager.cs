@@ -23,7 +23,7 @@ public class StatsManager : MonoBehaviour
     public int baseDamage;
     public int cooldownReduction;
     public int projectileSize;
-    public int critChange;
+    public int critChance;
     public float critDamage;
 
     [Header("Energy")]

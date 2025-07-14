@@ -161,8 +161,8 @@ MonoBehaviour:
   revives: 0
   baseDamage: 1
   cooldownReduction: 1
-  projectileSize: 0
-  critChange: 0
+  projectileSize: 1
+  critChance: 0
   critDamage: 1.4
   stamina: 100
   playerLevel: 1
@@ -1896,9 +1896,9 @@ GameObject:
   - component: {fileID: 1316249448}
   - component: {fileID: 1316249452}
   - component: {fileID: 1316249454}
-  - component: {fileID: 1316249455}
   - component: {fileID: 1316249456}
   - component: {fileID: 1316249457}
+  - component: {fileID: 1316249458}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2030,23 +2030,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56782cd4530a3df408b945a52c7bcf03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1316249455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1316249447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 714975e44c995404ab95053a8268ef60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectileSpeed: 15
-  cooldown: 1
-  cooldownReset: 1
-  projectile: {fileID: 4884262015840521007, guid: c317f84ed57dbb042a4644f5eb664fe5, type: 3}
-  spawnPoint: {fileID: 1171362827}
 --- !u!114 &1316249456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2071,6 +2054,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4b509e507e7cd44ba6febd513c56d84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1316249458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316249447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1994ea283a93dc459ed2070ddc921ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  primaryClickSkill: {fileID: 11400000, guid: 7a52270e1d289c242a0605e0656fea7d, type: 2}
+  secondaryClickSkill: {fileID: 0}
+  qSkill: {fileID: 0}
+  eSkill: {fileID: 0}
+  rSkill: {fileID: 0}
+  passiveSkill: {fileID: 0}
 --- !u!1 &1395827167
 GameObject:
   m_ObjectHideFlags: 0
