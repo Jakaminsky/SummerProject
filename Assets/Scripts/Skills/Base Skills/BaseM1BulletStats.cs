@@ -10,16 +10,15 @@ public class BaseM1BulletStats : MonoBehaviour
         if (Enemy.CompareTag("Enemy"))
         {
             int crit = Random.Range(1, 101);
-            Debug.Log(crit);
             if(crit <= StatsManager.instance.critChance)//yes crit
             {
                 Debug.Log("crit");
-                Enemy.GetComponent<EnemyStats>().health -= damage * StatsManager.instance.critDamage;
+                Enemy.GetComponent<EnemyStats>().health -= damage * StatsManager.instance.critDamage * StatsManager.instance.baseDamage;
                 Destroy(gameObject);
             }
             else
             {
-                Enemy.GetComponent<EnemyStats>().health -= damage;
+                Enemy.GetComponent<EnemyStats>().health -= damage * StatsManager.instance.baseDamage;
                 Destroy(gameObject);
             }
         }
