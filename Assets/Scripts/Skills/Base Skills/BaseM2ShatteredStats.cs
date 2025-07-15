@@ -5,12 +5,29 @@ public class BaseM2ShatteredStats : MonoBehaviour
 {
     public float damage = 5f;
 
+    private Coroutine damageCoroutine;
+
+    private void Start()
+    {
+        StartCoroutine(destroyObject());
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         GameObject Enemy = collision.gameObject;
         if (Enemy.CompareTag("Enemy"))
         {
-           StartCoroutine(delayDamage(Enemy));
+            damageCoroutine = StartCoroutine(delayDamage(Enemy));
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        Debug.Log("stop damage");
+        GameObject Enemy = collision.gameObject;
+        if (Enemy.CompareTag("Enemy"))
+        {
+            StopCoroutine(damageCoroutine);
         }
     }
 
@@ -21,6 +38,11 @@ public class BaseM2ShatteredStats : MonoBehaviour
             Enemy.GetComponent<EnemyStats>().health -= damage * StatsManager.instance.baseDamage;
             yield return new WaitForSeconds(1);
         }
+    }
+
+    IEnumerator destroyObject()
+    {
+        yield return new WaitForSeconds(5);
         Destroy(gameObject);
     }
 
