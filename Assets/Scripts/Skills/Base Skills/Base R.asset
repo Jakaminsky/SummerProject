@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afc28810fd66d7746a59596b687c3844, type: 3}
-  m_Name: Base E
+  m_Script: {fileID: 11500000, guid: 4ec74f6362e6d5743adc1bc82088b568, type: 3}
+  m_Name: Base R
   m_EditorClassIdentifier: 
-  skillName: Sniper
-  skillDescription: Piercing Sniper Shot
+  skillName: Drunkin Roar
+  skillDescription: Buff stats and do aoe damage
   icon: {fileID: 0}
-  cooldown: 20
-  bulletPrefab: {fileID: 4884262015840521007, guid: b414704aca0be65408d95a821ab5716a, type: 3}
-  projectileSpeed: 50
+  cooldown: 2
+  radius: 8
+  damage: 100

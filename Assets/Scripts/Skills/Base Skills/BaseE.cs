@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Skills/BaseE")]
+[CreateAssetMenu(menuName = "Skills/Base/E")]
 public class BaseE : ActiveSkill
 {
     public GameObject bulletPrefab;

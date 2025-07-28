@@ -5,7 +5,7 @@ public class StatsManager : MonoBehaviour
     public static StatsManager instance;
 
     [Header("Movement")]
-    public int moveSpeed;
+    public float moveSpeed;
     public int dashSpeed;
     public int dashCooldown;
     public float dashDuration;
@@ -15,15 +15,15 @@ public class StatsManager : MonoBehaviour
     [Header("Health")]
     public float maxHealth;
     public float currentHealth;
-    public int armor; //reduce flat damage
-    public int block; //% to negate damage
+    public float armor; //reduce flat damage
+    public float block; //% to negate damage
     public int revives;
 
     [Header("Combat")]
-    public int baseDamage;
-    public int cooldownReduction;
-    public int projectileSize;
-    public int critChance;
+    public float baseDamage;
+    public float cooldownReduction;
+    public float projectileSize;
+    public float critChance;
     public float critDamage;
 
     [Header("Energy")]
@@ -33,8 +33,8 @@ public class StatsManager : MonoBehaviour
     public int playerLevel;
     public float currentXp;
     public float neededXp;
-    public int experienceGain;
-    public int experienceRadius;
+    public float experienceGain;
+    public float experienceRadius;
 
     private void Awake()
     {

@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Skills/BaseM1")]
+[CreateAssetMenu(menuName = "Skills/Base/M1")]
 public class BaseM1 : ActiveSkill
 {
     public GameObject bulletPrefab;
@@ -16,7 +16,10 @@ public class BaseM1 : ActiveSkill
         Quaternion rotation = Quaternion.LookRotation(dir);
         GameObject bullet = Instantiate(bulletPrefab, spawnPos, rotation);
         bullet.transform.localScale *= StatsManager.instance.projectileSize;
-        bullet.GetComponent<Rigidbody>().linearVelocity = dir * projectileSpeed;
+        
+        //Vector3 playerVelocity = user.GetComponent<Rigidbody>().linearVelocity;
+        
+        bullet.GetComponent<Rigidbody>().linearVelocity = (dir * projectileSpeed);
         CoroutineHelper.Instance.StartCoroutine(destroyBullet(bullet));
     }
 

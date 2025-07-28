@@ -4,4 +4,5 @@ using UnityEngine;
 public class PassiveSkill : SkillData
 {
     public virtual void Apply(GameObject user) { }
+    public virtual void Remove(GameObject user) { }
 }

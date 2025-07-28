@@ -2,7 +2,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Skills/BaseM2")]
+[CreateAssetMenu(menuName = "Skills/Base/M2")]
 public class BaseM2 : ActiveSkill
 {
     public GameObject bottlePrefab;

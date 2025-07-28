@@ -24,8 +24,11 @@ public class PlayerStatCanvas : MonoBehaviour
     {
         currentHealth = Mathf.Clamp(StatsManager.instance.currentHealth, 0, StatsManager.instance.maxHealth);
         maxHealth = StatsManager.instance.maxHealth;
+        
+        //maxHealth = Mathf.Round(maxHealth);
+        //currentHealth = Mathf.Round(currentHealth);
 
         healthSlider.value = currentHealth/maxHealth;
-        healthText.text = currentHealth.ToString() + "/" + maxHealth.ToString();
+        healthText.text = Mathf.RoundToInt(currentHealth) + "/" + Mathf.RoundToInt(maxHealth);
     }
 }

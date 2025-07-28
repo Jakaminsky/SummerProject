@@ -808,11 +808,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8166768250734975281, guid: 76fec7171e67d714d914d7f9004c43fa, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9064785091310929973, guid: 76fec7171e67d714d914d7f9004c43fa, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.18
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 9064785091310929973, guid: 76fec7171e67d714d914d7f9004c43fa, type: 3}
       propertyPath: m_LocalPosition.y
@@ -820,7 +820,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9064785091310929973, guid: 76fec7171e67d714d914d7f9004c43fa, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.06
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 9064785091310929973, guid: 76fec7171e67d714d914d7f9004c43fa, type: 3}
       propertyPath: m_LocalRotation.w
@@ -893,11 +893,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8166768250734975281, guid: 76fec7171e67d714d914d7f9004c43fa, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9064785091310929973, guid: 76fec7171e67d714d914d7f9004c43fa, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9064785091310929973, guid: 76fec7171e67d714d914d7f9004c43fa, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1430,11 +1430,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8166768250734975281, guid: 76fec7171e67d714d914d7f9004c43fa, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9064785091310929973, guid: 76fec7171e67d714d914d7f9004c43fa, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.82
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9064785091310929973, guid: 76fec7171e67d714d914d7f9004c43fa, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2165,9 +2165,9 @@ MonoBehaviour:
   primaryClickSkill: {fileID: 11400000, guid: 7a52270e1d289c242a0605e0656fea7d, type: 2}
   secondaryClickSkill: {fileID: 11400000, guid: 31ce166c3f14c964ca8b67a1bdbf17c4, type: 2}
   qSkill: {fileID: 11400000, guid: db32d49b155056147b6da041ecb96416, type: 2}
-  eSkill: {fileID: 0}
-  rSkill: {fileID: 0}
-  passiveSkill: {fileID: 0}
+  eSkill: {fileID: 11400000, guid: 6402bf9df9c23a8479fe494f8bd1a6bf, type: 2}
+  rSkill: {fileID: 11400000, guid: b8ae1e6c8db4f554f98d5b6e486da55c, type: 2}
+  currentPassiveSkill: {fileID: 0}
 --- !u!1 &1395827167
 GameObject:
   m_ObjectHideFlags: 0
@@ -3123,11 +3123,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8166768250734975281, guid: 76fec7171e67d714d914d7f9004c43fa, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9064785091310929973, guid: 76fec7171e67d714d914d7f9004c43fa, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 9064785091310929973, guid: 76fec7171e67d714d914d7f9004c43fa, type: 3}
       propertyPath: m_LocalPosition.y
