@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c347df9e6d6d91a449929682485fb45e, type: 3}
+  m_Name: Base M2
+  m_EditorClassIdentifier: 
+  skillName: Bottle Throw
+  skillDescription: Throw Beer Bottle
+  icon: {fileID: 0}
+  cooldown: 2
+  bottlePrefab: {fileID: 3060081153958139856, guid: ca2fa3b8a9c4345439c6403b0428f983, type: 3}
+  launchAngle: 2

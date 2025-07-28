@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ec74f6362e6d5743adc1bc82088b568, type: 3}
+  m_Name: Base R
+  m_EditorClassIdentifier: 
+  skillName: Drunkin Roar
+  skillDescription: Buff stats and do aoe damage
+  icon: {fileID: 0}
+  cooldown: 2
+  radius: 8
+  damage: 100
