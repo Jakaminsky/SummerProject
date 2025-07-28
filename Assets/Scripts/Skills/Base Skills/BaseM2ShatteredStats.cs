@@ -23,7 +23,6 @@ public class BaseM2ShatteredStats : MonoBehaviour
 
     private void OnCollisionExit(Collision collision)
     {
-        Debug.Log("stop damage");
         GameObject Enemy = collision.gameObject;
         if (Enemy.CompareTag("Enemy"))
         {

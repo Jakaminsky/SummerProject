@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 6102951114834638991}
   - component: {fileID: 769943178777249228}
   - component: {fileID: 4883143353339171254}
-  - component: {fileID: 8565947734186235925}
+  - component: {fileID: 3296439961364303043}
   m_Layer: 0
   m_Name: SniperProjectile
   m_TagString: Projectile
@@ -140,8 +140,8 @@ Transform:
   m_GameObject: {fileID: 4884262015840521007}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 1.5, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: 0.28869, y: 1.5, z: -0.000000034414}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8818669807847050661}
@@ -215,7 +215,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -248,7 +248,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
---- !u!114 &8565947734186235925
+--- !u!114 &3296439961364303043
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -257,7 +257,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4884262015840521007}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e37214382da55c40b2818577bb9847d, type: 3}
+  m_Script: {fileID: 11500000, guid: 03bb5dc29195a024b920e456c8b6b858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
+  damage: 80
