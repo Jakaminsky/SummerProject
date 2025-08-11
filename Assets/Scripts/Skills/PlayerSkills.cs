@@ -43,8 +43,6 @@ public class PlayerSkills : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q)) TryUseSkill(qSkill, 2);
         if (Input.GetKeyDown(KeyCode.E)) TryUseSkill(eSkill, 3);
         if (Input.GetKeyDown(KeyCode.R)) TryUseSkill(rSkill, 4);
-
-        Debug.Log(cooldownTimers[3]);
     }
 
     void TryUseSkill(SkillData skill, int index)
