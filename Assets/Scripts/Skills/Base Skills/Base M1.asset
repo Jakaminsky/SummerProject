@@ -15,6 +15,7 @@ MonoBehaviour:
   skillName: Duel Pistols
   skillDescription: Shoot 2 pistols
   icon: {fileID: 0}
-  cooldown: 0.2
+  baseCooldown: 0.2
+  currentCooldown: 0.172
   bulletPrefab: {fileID: 4884262015840521007, guid: c317f84ed57dbb042a4644f5eb664fe5, type: 3}
   projectileSpeed: 10

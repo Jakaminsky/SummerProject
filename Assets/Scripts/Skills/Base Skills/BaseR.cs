@@ -30,14 +30,14 @@ public class BaseR : ActiveSkill
         }
 
         //buff by 14 % - base damage - move speed - health - cdr - size - exp gain - exp radius
-        StatsManager.instance.baseDamage += 0.14f;
-        StatsManager.instance.moveSpeed *= 1.14f;
-        StatsManager.instance.maxHealth *= 1.14f;
-        StatsManager.instance.currentHealth *= 1.14f;
-        StatsManager.instance.cooldownReduction += 0.14f;
-        StatsManager.instance.projectileSize += 0.14f;
-        StatsManager.instance.experienceGain += 0.14f;
-        StatsManager.instance.experienceRadius *= 1.14f;
+        StatsManager.instance.baseDamage += 0.07f;
+        StatsManager.instance.moveSpeed *= 1.07f;
+        StatsManager.instance.maxHealth *= 1.07f;
+        StatsManager.instance.currentHealth *= 1.07f;
+        StatsManager.instance.cooldownReduction -= 0.07f;
+        StatsManager.instance.projectileSize += 0.07f;
+        StatsManager.instance.experienceGain += 0.07f;
+        StatsManager.instance.experienceRadius *= 1.07f;
     }
 
 }

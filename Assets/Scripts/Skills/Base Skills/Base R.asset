@@ -15,6 +15,7 @@ MonoBehaviour:
   skillName: Drunkin Roar
   skillDescription: Buff stats and do aoe damage
   icon: {fileID: 0}
-  cooldown: 2
+  baseCooldown: 120
+  currentCooldown: 120
   radius: 8
   damage: 100

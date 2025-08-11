@@ -15,6 +15,7 @@ MonoBehaviour:
   skillName: Bottle Throw
   skillDescription: Throw Beer Bottle
   icon: {fileID: 0}
-  cooldown: 2
+  baseCooldown: 8
+  currentCooldown: 6.88
   bottlePrefab: {fileID: 3060081153958139856, guid: ca2fa3b8a9c4345439c6403b0428f983, type: 3}
   launchAngle: 2

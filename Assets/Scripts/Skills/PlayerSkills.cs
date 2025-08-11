@@ -12,7 +12,7 @@ public class PlayerSkills : MonoBehaviour
     [Header("Passive Skill")]
     public PassiveSkill currentPassiveSkill;
 
-    private float[] cooldownTimers = new float[5];
+    public float[] cooldownTimers = new float[5];
 
     private bool passiveApplied = false;
     private PassiveSkill lastAppliedPassive;
@@ -33,8 +33,6 @@ public class PlayerSkills : MonoBehaviour
             passiveApplied = false;
         }
 
-        Debug.Log(currentPassiveSkill);
-
         for (int i = 0; i < cooldownTimers.Length; i++)
         {
             cooldownTimers[i] -= Time.deltaTime;
@@ -45,14 +43,17 @@ public class PlayerSkills : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q)) TryUseSkill(qSkill, 2);
         if (Input.GetKeyDown(KeyCode.E)) TryUseSkill(eSkill, 3);
         if (Input.GetKeyDown(KeyCode.R)) TryUseSkill(rSkill, 4);
+
+        Debug.Log(cooldownTimers[3]);
     }
 
     void TryUseSkill(SkillData skill, int index)
     {
         if (skill == null || cooldownTimers[index] > 0) return;
 
+        skill.ApplyCDR();
         skill.Activate(gameObject);
-        cooldownTimers[index] = skill.cooldown;
+        cooldownTimers[index] = skill.currentCooldown;
     }
 
 }
