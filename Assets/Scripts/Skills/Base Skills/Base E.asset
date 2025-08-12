@@ -16,6 +16,7 @@ MonoBehaviour:
   skillDescription: Piercing Sniper Shot
   icon: {fileID: 0}
   baseCooldown: 20
-  currentCooldown: 17.2
+  currentCooldown: 2
   bulletPrefab: {fileID: 4884262015840521007, guid: b414704aca0be65408d95a821ab5716a, type: 3}
   projectileSpeed: 50
+  muzzleFlash: {fileID: 5393288962106925053, guid: 991d974f70f4d2741b6411cb0ef70eb6, type: 3}

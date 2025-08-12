@@ -1126,7 +1126,7 @@ RectTransform:
   m_Father: {fileID: 2072870521}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 4.9999847, y: 0}
   m_SizeDelta: {x: 20.00005, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2618,6 +2618,12 @@ MonoBehaviour:
   eSkill: {fileID: 11400000, guid: 6402bf9df9c23a8479fe494f8bd1a6bf, type: 2}
   rSkill: {fileID: 11400000, guid: b8ae1e6c8db4f554f98d5b6e486da55c, type: 2}
   currentPassiveSkill: {fileID: 11400000, guid: 65a040396399ec54aad55a6ab4dddfce, type: 2}
+  cooldownTimers:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
 --- !u!1 &1395827167
 GameObject:
   m_ObjectHideFlags: 0
@@ -2773,7 +2779,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1423415682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3073,7 +3079,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1645748013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3466,6 +3472,7 @@ GameObject:
   - component: {fileID: 1821188849}
   - component: {fileID: 1821188848}
   - component: {fileID: 1821188847}
+  - component: {fileID: 1821188851}
   m_Layer: 5
   m_Name: Cooldown Canvas
   m_TagString: Untagged
@@ -3565,6 +3572,30 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1821188851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821188846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 812eaa5899956f74eafe129ebf7d45cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSkills: {fileID: 1316249458}
+  skillSlots:
+  - cooldownOverlay: {fileID: 810179511}
+    skillIndex: 0
+  - cooldownOverlay: {fileID: 1833297953}
+    skillIndex: 1
+  - cooldownOverlay: {fileID: 1750740394}
+    skillIndex: 2
+  - cooldownOverlay: {fileID: 970920190}
+    skillIndex: 3
+  - cooldownOverlay: {fileID: 1966411008}
+    skillIndex: 4
 --- !u!1 &1827889662
 GameObject:
   m_ObjectHideFlags: 0

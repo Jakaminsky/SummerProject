@@ -16,8 +16,9 @@ MonoBehaviour:
   skillDescription: Shoot shotgun that knocks back
   icon: {fileID: 0}
   baseCooldown: 10
-  currentCooldown: 8.6
+  currentCooldown: 0.5
   bulletPrefab: {fileID: 4884262015840521007, guid: 5d6d0e18555bd1e4394ad3fe0c2d390c, type: 3}
   projectileSpeed: 30
   bulletCount: 16
   totalSpreadAngle: 45
+  muzzleFlash: {fileID: 5393288962106925053, guid: c73e79bb4e0114546a138fe963c2b37a, type: 3}

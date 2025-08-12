@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using UnityEngine;
 
@@ -7,8 +8,12 @@ public class BaseR : ActiveSkill
     public float radius = 8f;
     public float damage = 100f;
 
+    public ParticleSystem shockwave;
+
     public override void Activate(GameObject user)
     {
+        ParticleSystem shockWave = Instantiate(shockwave, user.transform.position, Quaternion.identity);
+
         Collider[] EnemyColliders = Physics.OverlapSphere(user.transform.position, radius);
         foreach (Collider Enemy in EnemyColliders)
         {
@@ -19,12 +24,10 @@ public class BaseR : ActiveSkill
                 {
                     Debug.Log("crit");
                     Enemy.GetComponent<EnemyStats>().health -= damage * StatsManager.instance.critDamage * StatsManager.instance.baseDamage;
-                    Enemy.GetComponent<Knockback>().ApplyKnockback(user.transform.position);
                 }
                 else
                 {
                     Enemy.GetComponent<EnemyStats>().health -= damage * StatsManager.instance.baseDamage;
-                    Enemy.GetComponent<Knockback>().ApplyKnockback(user.transform.position);
                 }
             }
         }
@@ -38,6 +41,14 @@ public class BaseR : ActiveSkill
         StatsManager.instance.projectileSize += 0.07f;
         StatsManager.instance.experienceGain += 0.07f;
         StatsManager.instance.experienceRadius *= 1.07f;
+
+        CoroutineHelper.Instance.StartCoroutine(destroyParticle(shockWave));
+    }
+
+    private IEnumerator destroyParticle(ParticleSystem shockwave)
+    {
+        yield return new WaitForSeconds(5.0f);
+        Destroy(shockwave.gameObject);
     }
 
 }

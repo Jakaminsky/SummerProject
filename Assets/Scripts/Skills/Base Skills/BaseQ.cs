@@ -9,10 +9,14 @@ public class BaseQ : ActiveSkill
     public int bulletCount;
     public float totalSpreadAngle = 30f;
 
+    public ParticleSystem muzzleFlash;
+
     public override void Activate(GameObject user)
     {
         Transform spawn = user.transform.Find("SpawnPoint");
         Vector3 spawnPos = spawn != null ? spawn.position : user.transform.position;
+
+        ParticleSystem flash = Instantiate(muzzleFlash, spawnPos, Quaternion.identity);
 
         float angleStep = bulletCount > 1 ? totalSpreadAngle / (bulletCount - 1) : 0f;
         float startAngle = -totalSpreadAngle / 2f;
@@ -24,7 +28,7 @@ public class BaseQ : ActiveSkill
             Vector3 direction = Quaternion.Euler(0f, angle, 0f) * user.transform.forward;
 
             GameObject bullet = Instantiate(bulletPrefab, spawnPos, Quaternion.LookRotation(direction));
-            CoroutineHelper.Instance.StartCoroutine(destroyBullet(bullet));
+            CoroutineHelper.Instance.StartCoroutine(destroyBullet(bullet, flash));
 
             Rigidbody rb = bullet.GetComponent<Rigidbody>();
             if (rb != null)
@@ -34,10 +38,11 @@ public class BaseQ : ActiveSkill
         }
     }
 
-    private IEnumerator destroyBullet(GameObject bullet)
+    private IEnumerator destroyBullet(GameObject bullet, ParticleSystem muzzleFlash)
     {
-        yield return new WaitForSeconds(0.15f);
+        yield return new WaitForSeconds(5.0f);
         Destroy(bullet);
+        Destroy(muzzleFlash.gameObject);
     }
 
 }

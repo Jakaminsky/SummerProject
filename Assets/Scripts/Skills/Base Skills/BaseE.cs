@@ -7,23 +7,28 @@ public class BaseE : ActiveSkill
     public GameObject bulletPrefab;
     public float projectileSpeed;
 
+    public ParticleSystem muzzleFlash;
+
     public override void Activate(GameObject user)
     {
         Transform spawn = user.transform.Find("SpawnPoint");
         Vector3 spawnPos = spawn != null ? spawn.position : user.transform.position;
+
+        ParticleSystem flash = Instantiate(muzzleFlash, spawnPos, Quaternion.identity);
 
         Vector3 dir = user.transform.forward;
         Quaternion rotation = Quaternion.LookRotation(dir);
         GameObject bullet = Instantiate(bulletPrefab, spawnPos, rotation);
         bullet.transform.localScale *= StatsManager.instance.projectileSize;
         bullet.GetComponent<Rigidbody>().linearVelocity = dir * projectileSpeed;
-        CoroutineHelper.Instance.StartCoroutine(destroyBullet(bullet));
+        CoroutineHelper.Instance.StartCoroutine(destroyBullet(bullet, flash));
     }
 
-    private IEnumerator destroyBullet(GameObject bullet)
+    private IEnumerator destroyBullet(GameObject bullet, ParticleSystem muzzleFlash)
     {
-        yield return new WaitForSeconds(10.0f);
+        yield return new WaitForSeconds(5.0f);
         Destroy(bullet);
+        Destroy(muzzleFlash.gameObject);
     }
 
 }

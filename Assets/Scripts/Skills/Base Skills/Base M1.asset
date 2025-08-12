@@ -16,6 +16,7 @@ MonoBehaviour:
   skillDescription: Shoot 2 pistols
   icon: {fileID: 0}
   baseCooldown: 0.2
-  currentCooldown: 0.172
+  currentCooldown: 0.2
   bulletPrefab: {fileID: 4884262015840521007, guid: c317f84ed57dbb042a4644f5eb664fe5, type: 3}
   projectileSpeed: 10
+  muzzleFlash: {fileID: 5393288962106925053, guid: 74d7939ab94a7bc4d96282eb3bcc39ab, type: 3}

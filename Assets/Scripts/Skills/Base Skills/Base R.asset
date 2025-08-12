@@ -16,6 +16,7 @@ MonoBehaviour:
   skillDescription: Buff stats and do aoe damage
   icon: {fileID: 0}
   baseCooldown: 120
-  currentCooldown: 120
+  currentCooldown: -116.39999
   radius: 8
   damage: 100
+  shockwave: {fileID: 4891440538664600065, guid: e765bf7683a60b44d940bb7deed29198, type: 3}
